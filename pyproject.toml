@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ato-in-a-box"
+version = "0.1.0"
+description = "Turn AgentTrace audit evidence into assessor-ready compliance evidence packs (NIST SP 800-53 / AI RMF), with an honest gaps section."
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+[project.scripts]
+atoinabox = "atoinabox.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["atoinabox*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
